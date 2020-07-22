@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
+        android:text="Show Guide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/guide_container"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginBottom="50dp"
+        android:background="#000000"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="向下滑动，查看更多"
+            android:textColor="#ffffff"
+            android:textSize="16sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/iv_first"
+                android:layout_width="48dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_quick_access_arrow_grey"
+                android:visibility="gone"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_second"
+                android:layout_width="48dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_quick_access_arrow_grey_white"
+                android:visibility="gone"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_third"
+                android:layout_width="48dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_quick_access_arrow_white"
+                android:visibility="gone"></ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
